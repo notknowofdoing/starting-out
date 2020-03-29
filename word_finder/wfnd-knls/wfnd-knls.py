@@ -1,3 +1,23 @@
+def finder(text,dictionary):
+    words = []
+    #count = 0
+    for entry in dictionary:
+        t_index = -1
+        for letter in text:
+            cache = ''
+            t_index+=1
+            if letter == entry[0].lower():
+                for i in range(len(entry)):
+                    try:
+                        cache += text[t_index+i]
+                    except:
+                        break
+                if entry.lower() == cache:
+                    words.append(entry)
+                    break
+                
+    return words
+    
 def finderv2(text,dictionary):
     words = []
     for entry in dictionary:
@@ -36,7 +56,7 @@ file = get_file("text")
 text = extract_text(file)
 dictionary = dictionarize(get_file("dictionary").read())
 
-result = finderv2(text,dictionary)
+result = finder(text,dictionary)
 count = 0
 
 for i in result:
