@@ -72,10 +72,10 @@ word=['Genesis',
 
 wrdcount = (len(word))
 for i in range(0,wrdcount):
- word[i] = word[i].lower()
- a=word[i]
+ a = word[i].lower()
+ 
  
  if a in newstring:
      
-     print(word[i],"is in the given in para")
+     print(a,"is in the given in para")
  
