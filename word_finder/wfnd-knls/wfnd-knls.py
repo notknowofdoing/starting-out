@@ -1,3 +1,4 @@
+###function definitions###
 def finder(text,dictionary):
     words = []
     #count = 0
@@ -52,6 +53,7 @@ def dictionarize(input):
 	result = input.strip("\n").split(",")
 	return result
 
+###main function###
 file = get_file("text")
 text = extract_text(file)
 dictionary = dictionarize(get_file("dictionary").read())
